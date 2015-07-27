@@ -27,7 +27,9 @@
         //
         function playAudio(src) {
             // Create Media object from src
-            my_media = new Media(src, onSuccess, onError);
+			var txt = "file:///android_asset/www/";
+			console.log("La url es: " + txt+src);
+            my_media = new Media(txt+src, onSuccess, onError);
 
             // Play audio
             my_media.play();
